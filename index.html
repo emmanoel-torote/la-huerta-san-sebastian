@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Huerta San Sebastián | Residencias Exclusivas en Todos Santos</title>
-    <meta name="description" content="Descubre 3 residencias arquitectónicas únicas en La Huerta San Sebastián, Todos Santos. Diseñadas por los mejores arquitectos mexicanos.">
+    <title>La Huerta San Sebastián | Exclusive Residences in Todos Santos</title>
+    <meta name="description" content="Discover 3 unique architectural residences in La Huerta San Sebastián, Todos Santos. Designed by Mexico's leading architects.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,11 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">LA HUERTA</span>
-                <span class="logo-subtext">SAN SEBASTIÁN</span>
+                <img src="images/logo.png" alt="La Huerta San Sebastián" class="logo-image">
             </div>
             <div class="nav-links">
-                <a href="#residencias" class="nav-link">Residencias</a>
-                <a href="#contacto" class="nav-link-cta">Solicitar Tour Privado</a>
+                <a href="#residencias" class="nav-link">Residences</a>
+                <a href="#contacto" class="nav-link-cta">Schedule Private Tour</a>
             </div>
         </div>
     </nav>
@@ -29,15 +28,25 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Una Colección Excepcional de<br>Arquitectura Mexicana</h1>
-                <p class="hero-subtitle">3 residencias únicas disponibles en el enclave arquitectónico más exclusivo de Todos Santos</p>
+                <h1 class="hero-title">An Exceptional Collection of<br>Mexican Architecture</h1>
+                <p class="hero-subtitle">3 unique residences available in Todos Santos' most exclusive architectural enclave</p>
                 <div class="hero-ctas">
-                    <a href="#residencias" class="btn-primary">Explorar Residencias</a>
-                    <a href="#contacto" class="btn-secondary">Agendar Tour</a>
+                    <a href="#residencias" class="btn-primary">Explore Residences</a>
+                    <a href="#contacto" class="btn-secondary">Schedule Tour</a>
                 </div>
             </div>
         </div>
         <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Exclusively Represented By -->
+    <section class="represented-by">
+        <div class="container">
+            <div class="represented-content">
+                <span class="represented-text">Exclusively Represented by</span>
+                <img src="images/ricardo-amigo-logo.png" alt="Ricardo Amigo Real Estate" class="represented-logo">
+            </div>
+        </div>
     </section>
 
     <!-- Location Badge -->
@@ -57,8 +66,8 @@
     <section class="intro">
         <div class="container">
             <div class="intro-content">
-                <h2 class="section-title">Un Enclave de Sólo 10 Residencias</h2>
-                <p class="intro-text">La Huerta San Sebastián representa la armonía perfecta entre arquitectura contemporánea mexicana y la belleza natural de Baja California Sur. Cada residencia ha sido diseñada por arquitectos mexicanos de renombre, creando un legado de diseño excepcional.</p>
+                <h2 class="section-title">An Enclave of Only 10 Residences</h2>
+                <p class="intro-text">La Huerta San Sebastián represents the perfect harmony between contemporary Mexican architecture and the natural beauty of Baja California Sur. Each residence has been designed by renowned Mexican architects, creating a legacy of exceptional design.</p>
             </div>
         </div>
     </section>
@@ -67,8 +76,8 @@
     <section class="properties" id="residencias">
         <div class="container-wide">
             <div class="properties-header">
-                <h2 class="section-title">3 Residencias Disponibles</h2>
-                <p class="properties-subtitle">Cada una con su propia identidad arquitectónica</p>
+                <h2 class="section-title">3 Residences Available</h2>
+                <p class="properties-subtitle">Each with its own architectural identity</p>
             </div>
 
             <!-- Property Tabs -->
@@ -82,29 +91,38 @@
             <div class="property-detail active" id="nube">
                 <div class="property-grid">
                     <div class="property-images">
-                        <div class="main-image">
-                            <img src="https://placehold.co/800x600/d4c5b0/ffffff?text=Casa+Nube" alt="Casa Nube - La Huerta San Sebastián">
+                        <!-- VIDEO PLACEHOLDER for Casa Nube -->
+                        <div class="main-video">
+                            <div class="video-placeholder">
+                                <div class="video-icon">🎥</div>
+                                <p>Video Coming Soon</p>
+                                <!-- When you get the video, replace the above with: -->
+                                <!-- <video controls poster="images/casa-nube-poster.jpg">
+                                    <source src="images/casa-nube-video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> -->
+                            </div>
                         </div>
                         <div class="image-gallery">
-                            <img src="https://placehold.co/250x200/d4c5b0/ffffff?text=Vista+1" alt="Casa Nube vista 1">
-                            <img src="https://placehold.co/250x200/d4c5b0/ffffff?text=Vista+2" alt="Casa Nube vista 2">
-                            <img src="https://placehold.co/250x200/d4c5b0/ffffff?text=Vista+3" alt="Casa Nube vista 3">
+                            <img src="images/casa-nube-1.jpg" alt="Casa Nube vista 1">
+                            <img src="images/casa-nube-2.jpg" alt="Casa Nube vista 2">
+                            <img src="images/casa-nube-3.jpg" alt="Casa Nube vista 3">
                         </div>
                     </div>
                     
                     <div class="property-info">
                         <h3 class="property-name">Casa Nube</h3>
-                        <p class="property-architect">Arquitecto: Hector Barroso</p>
+                        <p class="property-architect">Architect: Hector Barroso</p>
                         <p class="property-price">$2,699,999 USD</p>
                         
                         <div class="property-features">
                             <div class="feature">
                                 <span class="feature-icon">🛏️</span>
-                                <span class="feature-text">4 Recámaras</span>
+                                <span class="feature-text">4 Bedrooms</span>
                             </div>
                             <div class="feature">
                                 <span class="feature-icon">🚿</span>
-                                <span class="feature-text">4.5 Baños</span>
+                                <span class="feature-text">4.5 Bathrooms</span>
                             </div>
                             <div class="feature">
                                 <span class="feature-icon">📐</span>
@@ -117,26 +135,26 @@
                         </div>
 
                         <p class="property-description">
-                            Un retiro refinado en armonía con la tierra. Casa Nube invita a la quietud, la presencia y una profunda conexión con la naturaleza. El diseño de Hector Barroso fusiona arquitectura con emoción, memoria y hábitat, donde cada espacio está moldeado por la luz, el material y el lugar.
+                            A refined retreat in harmony with the land. Casa Nube invites stillness, presence, and a deep connection to nature. Hector Barroso's design philosophy blends architecture with emotion, memory, and habitat—where each space is shaped by light, material, and place.
                         </p>
 
                         <div class="property-highlights">
-                            <h4>Características Destacadas</h4>
+                            <h4>Featured Amenities</h4>
                             <ul>
-                                <li>Diseño arquitectónico por Hector Barroso</li>
-                                <li>Chimenea tipo 1</li>
-                                <li>Completamente amueblada</li>
-                                <li>Alberca climatizada</li>
-                                <li>Fuente de agua decorativa</li>
-                                <li>Patio privado</li>
-                                <li>Sistema séptico</li>
-                                <li>Agua municipal</li>
+                                <li>Architectural design by Hector Barroso</li>
+                                <li>Type 1 fireplace</li>
+                                <li>Fully furnished</li>
+                                <li>Heated pool</li>
+                                <li>Water feature</li>
+                                <li>Private patio</li>
+                                <li>Septic system</li>
+                                <li>Municipal water</li>
                             </ul>
                         </div>
 
                         <div class="property-ctas">
-                            <a href="#contacto" class="btn-primary">Agendar Tour de Esta Propiedad</a>
-                            <a href="https://ricardoamigorealestate.com/listing-detail/1174868049/-1-Pacific-BCS" target="_blank" class="btn-outline">Ver Detalles Completos</a>
+                            <a href="#contacto" class="btn-primary">Schedule Tour of This Property</a>
+                            <a href="https://ricardoamigorealestate.com/listing-detail/1174868049/-1-Pacific-BCS" target="_blank" class="btn-outline">View Full Details</a>
                         </div>
                     </div>
                 </div>
@@ -147,28 +165,28 @@
                 <div class="property-grid">
                     <div class="property-images">
                         <div class="main-image">
-                            <img src="https://placehold.co/800x600/c9a690/ffffff?text=Casa+Entre+Patios" alt="Casa Entre Patios - La Huerta San Sebastián">
+                            <img src="images/casa-patios-main.jpg" alt="Casa Entre Patios - La Huerta San Sebastián">
                         </div>
                         <div class="image-gallery">
-                            <img src="https://placehold.co/250x200/c9a690/ffffff?text=Vista+1" alt="Casa Entre Patios vista 1">
-                            <img src="https://placehold.co/250x200/c9a690/ffffff?text=Vista+2" alt="Casa Entre Patios vista 2">
-                            <img src="https://placehold.co/250x200/c9a690/ffffff?text=Vista+3" alt="Casa Entre Patios vista 3">
+                            <img src="images/casa-patios-1.jpg" alt="Casa Entre Patios vista 1">
+                            <img src="images/casa-patios-2.jpg" alt="Casa Entre Patios vista 2">
+                            <img src="images/casa-patios-3.jpg" alt="Casa Entre Patios vista 3">
                         </div>
                     </div>
                     
                     <div class="property-info">
                         <h3 class="property-name">Casa Entre Patios</h3>
-                        <p class="property-architect">Arquitecto: Sergio Ortiz</p>
+                        <p class="property-architect">Architect: Sergio Ortiz</p>
                         <p class="property-price">$2,699,999 USD</p>
                         
                         <div class="property-features">
                             <div class="feature">
                                 <span class="feature-icon">🛏️</span>
-                                <span class="feature-text">4 Recámaras</span>
+                                <span class="feature-text">4 Bedrooms</span>
                             </div>
                             <div class="feature">
                                 <span class="feature-icon">🚿</span>
-                                <span class="feature-text">4.5 Baños</span>
+                                <span class="feature-text">4.5 Bathrooms</span>
                             </div>
                             <div class="feature">
                                 <span class="feature-icon">📐</span>
@@ -181,25 +199,25 @@
                         </div>
 
                         <p class="property-description">
-                            Donde la brillantez arquitectónica se encuentra con el esplendor natural de Baja California Sur. Diseñada por el célebre arquitecto mexicano Sergio Ortiz, esta residencia transforma el vivir en una forma de arte, donde el concreto pulido danza con madera cálida y piedra nativa.
+                            Where architectural brilliance meets Baja California Sur's natural splendor. Designed by celebrated Mexican architect Sergio Ortiz, this home transforms living into an art form, where polished concrete dances with warm wood and native stone.
                         </p>
 
                         <div class="property-highlights">
-                            <h4>Características Destacadas</h4>
+                            <h4>Featured Amenities</h4>
                             <ul>
-                                <li>Diseño arquitectónico por Sergio Ortiz</li>
-                                <li>Chimenea tipo 1</li>
-                                <li>Completamente amueblada</li>
-                                <li>Área de BBQ</li>
-                                <li>Patio privado</li>
-                                <li>Alberca climatizada</li>
-                                <li>Entrega 2026</li>
+                                <li>Architectural design by Sergio Ortiz</li>
+                                <li>Type 1 fireplace</li>
+                                <li>Fully furnished</li>
+                                <li>BBQ area</li>
+                                <li>Private patio</li>
+                                <li>Heated pool</li>
+                                <li>Delivery 2026</li>
                             </ul>
                         </div>
 
                         <div class="property-ctas">
-                            <a href="#contacto" class="btn-primary">Agendar Tour de Esta Propiedad</a>
-                            <a href="https://ricardoamigorealestate.com/listing-detail/1175162591/-3-Pacific-BCS" target="_blank" class="btn-outline">Ver Detalles Completos</a>
+                            <a href="#contacto" class="btn-primary">Schedule Tour of This Property</a>
+                            <a href="https://ricardoamigorealestate.com/listing-detail/1175162591/-3-Pacific-BCS" target="_blank" class="btn-outline">View Full Details</a>
                         </div>
                     </div>
                 </div>
@@ -210,28 +228,28 @@
                 <div class="property-grid">
                     <div class="property-images">
                         <div class="main-image">
-                            <img src="https://placehold.co/800x600/b89080/ffffff?text=Casa+Portales" alt="Casa Portales - La Huerta San Sebastián">
+                            <img src="images/casa-portales-main.jpg" alt="Casa Portales - La Huerta San Sebastián">
                         </div>
                         <div class="image-gallery">
-                            <img src="https://placehold.co/250x200/b89080/ffffff?text=Vista+1" alt="Casa Portales vista 1">
-                            <img src="https://placehold.co/250x200/b89080/ffffff?text=Vista+2" alt="Casa Portales vista 2">
-                            <img src="https://placehold.co/250x200/b89080/ffffff?text=Vista+3" alt="Casa Portales vista 3">
+                            <img src="images/casa-portales-1.jpg" alt="Casa Portales vista 1">
+                            <img src="images/casa-portales-2.jpg" alt="Casa Portales vista 2">
+                            <img src="images/casa-portales-3.jpg" alt="Casa Portales vista 3">
                         </div>
                     </div>
                     
                     <div class="property-info">
                         <h3 class="property-name">Casa Portales</h3>
-                        <p class="property-architect">Arquitectos: Ana Victoria Pérez-Gil & Saúl Figueroa</p>
+                        <p class="property-architect">Architects: Ana Victoria Pérez-Gil & Saúl Figueroa</p>
                         <p class="property-price">$2,699,999 USD</p>
                         
                         <div class="property-features">
                             <div class="feature">
                                 <span class="feature-icon">🛏️</span>
-                                <span class="feature-text">4 Recámaras</span>
+                                <span class="feature-text">4 Bedrooms</span>
                             </div>
                             <div class="feature">
                                 <span class="feature-icon">🚿</span>
-                                <span class="feature-text">4.5 Baños</span>
+                                <span class="feature-text">4.5 Bathrooms</span>
                             </div>
                             <div class="feature">
                                 <span class="feature-icon">📐</span>
@@ -244,26 +262,26 @@
                         </div>
 
                         <p class="property-description">
-                            Una exploración de ritmo espacial y conexión. Las líneas arquitectónicas limpias se suavizan con materiales naturales y la presencia de un árbol de mango maduro que ancla el diseño de la residencia. Pisos de azulejo artesanal crean interiores que se sienten refinados y arraigados.
+                            An exploration of spatial rhythm and connection. Clean architectural lines are softened by natural materials and the presence of a mature mango tree that anchors the residence's design. Artisanal tile floors create interiors that feel both refined and grounded.
                         </p>
 
                         <div class="property-highlights">
-                            <h4>Características Destacadas</h4>
+                            <h4>Featured Amenities</h4>
                             <ul>
-                                <li>Diseño por Ana Victoria Pérez-Gil & Saúl Figueroa</li>
-                                <li>Completamente amueblada</li>
-                                <li>Área de BBQ</li>
-                                <li>Patio privado</li>
-                                <li>Alberca climatizada</li>
-                                <li>Área de descanso</li>
-                                <li>Fuente de agua decorativa</li>
-                                <li>Entrega 2026</li>
+                                <li>Design by Ana Victoria Pérez-Gil & Saúl Figueroa</li>
+                                <li>Fully furnished</li>
+                                <li>BBQ area</li>
+                                <li>Private patio</li>
+                                <li>Heated pool</li>
+                                <li>Sitting area</li>
+                                <li>Water feature</li>
+                                <li>Delivery 2026</li>
                             </ul>
                         </div>
 
                         <div class="property-ctas">
-                            <a href="#contacto" class="btn-primary">Agendar Tour de Esta Propiedad</a>
-                            <a href="https://ricardoamigorealestate.com/listing-detail/1175165488/-4-Pacific-BCS" target="_blank" class="btn-outline">Ver Detalles Completos</a>
+                            <a href="#contacto" class="btn-primary">Schedule Tour of This Property</a>
+                            <a href="https://ricardoamigorealestate.com/listing-detail/1175165488/-4-Pacific-BCS" target="_blank" class="btn-outline">View Full Details</a>
                         </div>
                     </div>
                 </div>
@@ -274,27 +292,27 @@
     <!-- La Huerta Features -->
     <section class="development-features">
         <div class="container">
-            <h2 class="section-title">Por Qué La Huerta San Sebastián</h2>
+            <h2 class="section-title">Why La Huerta San Sebastián</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-card-icon">🏛️</div>
-                    <h3>Arquitectura Excepcional</h3>
-                    <p>Cada residencia diseñada por arquitectos mexicanos de renombre internacional</p>
+                    <h3>Exceptional Architecture</h3>
+                    <p>Each residence designed by internationally renowned Mexican architects</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-card-icon">🌿</div>
-                    <h3>Conexión con la Naturaleza</h3>
-                    <p>Lotes de 2,000 m² que honran el paisaje original del antiguo huerto</p>
+                    <h3>Connection with Nature</h3>
+                    <p>2,000 m² lots that honor the original orchard landscape</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-card-icon">🔒</div>
-                    <h3>Privacidad Absoluta</h3>
-                    <p>Solo 10 residencias en todo el desarrollo, garantizando exclusividad</p>
+                    <h3>Absolute Privacy</h3>
+                    <p>Only 10 residences in the entire development, ensuring exclusivity</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-card-icon">🎨</div>
                     <h3>Todos Santos</h3>
-                    <p>Ubicado en el corazón del pueblo mágico más artístico de México</p>
+                    <p>Located in the heart of Mexico's most artistic magic town</p>
                 </div>
             </div>
         </div>
@@ -304,9 +322,9 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>¿Listo para Descubrir Tu Nueva Residencia?</h2>
-                <p>Agenda un tour privado y experimenta la arquitectura excepcional de La Huerta San Sebastián</p>
-                <a href="#contacto" class="btn-primary-large">Solicitar Tour Privado</a>
+                <h2>Ready to Discover Your New Residence?</h2>
+                <p>Schedule a private tour and experience the exceptional architecture of La Huerta San Sebastián</p>
+                <a href="#contacto" class="btn-primary-large">Request Private Tour</a>
             </div>
         </div>
     </section>
@@ -316,13 +334,13 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h2>Agenda Tu Tour Privado</h2>
-                    <p>Completa el formulario y te contactaremos en las próximas 24 horas para coordinar tu visita exclusiva a La Huerta San Sebastián.</p>
+                    <h2>Schedule Your Private Tour</h2>
+                    <p>Complete the form and we'll contact you within 24 hours to coordinate your exclusive visit to La Huerta San Sebastián.</p>
                     
                     <div class="agent-card">
                         <div class="agent-info">
                             <h3>Tyson Gargas</h3>
-                            <p class="agent-title">Agente Exclusivo</p>
+                            <p class="agent-title">Exclusive Agent</p>
                             <div class="agent-contact">
                                 <a href="mailto:tyson@ricardoamigo.com">tyson@ricardoamigo.com</a>
                                 <a href="tel:+526122342763">+52 (612) 234-2763</a>
@@ -340,7 +358,7 @@
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">Nombre Completo *</label>
+                            <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
 
@@ -350,41 +368,41 @@
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Teléfono *</label>
+                                <label for="phone">Phone *</label>
                                 <input type="tel" id="phone" name="phone" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="property">Residencia de Interés *</label>
+                            <label for="property">Property of Interest *</label>
                             <select id="property" name="property" required>
-                                <option value="">Selecciona una opción</option>
+                                <option value="">Select an option</option>
                                 <option value="Casa Nube">Casa Nube - $2,699,999 USD</option>
                                 <option value="Casa Entre Patios">Casa Entre Patios - $2,699,999 USD</option>
                                 <option value="Casa Portales">Casa Portales - $2,699,999 USD</option>
-                                <option value="Múltiples propiedades">Múltiples propiedades</option>
-                                <option value="Información general">Información general del desarrollo</option>
+                                <option value="Multiple properties">Multiple properties</option>
+                                <option value="General information">General development information</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="timeline">¿Cuándo planeas comprar? *</label>
+                            <label for="timeline">When are you planning to purchase? *</label>
                             <select id="timeline" name="timeline" required>
-                                <option value="">Selecciona una opción</option>
-                                <option value="Inmediato (0-3 meses)">Inmediato (0-3 meses)</option>
-                                <option value="Corto plazo (3-6 meses)">Corto plazo (3-6 meses)</option>
-                                <option value="Mediano plazo (6-12 meses)">Mediano plazo (6-12 meses)</option>
-                                <option value="Largo plazo (12+ meses)">Largo plazo (12+ meses)</option>
-                                <option value="Solo explorando">Solo explorando</option>
+                                <option value="">Select an option</option>
+                                <option value="Immediate (0-3 months)">Immediate (0-3 months)</option>
+                                <option value="Short term (3-6 months)">Short term (3-6 months)</option>
+                                <option value="Medium term (6-12 months)">Medium term (6-12 months)</option>
+                                <option value="Long term (12+ months)">Long term (12+ months)</option>
+                                <option value="Just exploring">Just exploring</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Mensaje / Preguntas</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos más sobre lo que buscas en tu nueva residencia..."></textarea>
+                            <label for="message">Message / Questions</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us more about what you're looking for in your new residence..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn-submit">Enviar Solicitud de Tour</button>
+                        <button type="submit" class="btn-submit">Submit Tour Request</button>
                     </form>
                 </div>
             </div>
@@ -396,18 +414,25 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-text">LA HUERTA</span>
-                    <span class="logo-subtext">SAN SEBASTIÁN</span>
+                    <img src="images/logo.png" alt="La Huerta San Sebastián" class="footer-logo-image">
+                </div>
+                <div class="footer-represented">
+                    <span class="footer-represented-text">Exclusively Represented by</span>
+                    <img src="images/ricardo-amigo-logo.png" alt="Ricardo Amigo Real Estate" class="footer-represented-logo">
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.lahuertasansebastian.com" target="_blank">Sitio Oficial</a>
+                    <a href="https://www.lahuertasansebastian.com" target="_blank">Official Website</a>
                     <a href="https://www.instagram.com/lahuertasansebastian" target="_blank">Instagram</a>
-                    <a href="mailto:tyson@ricardoamigo.com">Contacto</a>
+                    <a href="mailto:tyson@ricardoamigo.com">Contact</a>
                 </div>
-                <p class="footer-copyright">&copy; 2025 La Huerta San Sebastián. Todos los derechos reservados.</p>
+                <p class="footer-copyright">&copy; 2025 La Huerta San Sebastián. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
