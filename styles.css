@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 90vh;
     min-height: 600px;
     background: linear-gradient(135deg, var(--terracotta) 0%, var(--brown) 100%);
-    background-image: url('https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?q=80&w=2070');
+    background-image: url('images/hero.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
