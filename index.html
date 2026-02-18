@@ -3,303 +3,544 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Huerta San Sebastián — Architectural Residences in Todos Santos</title>
-    <meta name="description" content="A curated collection of 10 unique homes in Todos Santos, each designed by renowned Mexican architects.">
+    <title>La Huerta San Sebastián — Architectural Enclave in Todos Santos</title>
+    <meta name="description" content="A curated collection of 10 unique homes in Todos Santos, each designed by renowned Mexican architects. 3 residences now available.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Minimal Navigation -->
-    <nav class="nav-minimal">
-        <div class="nav-container-minimal">
-            <a href="#home" class="logo-minimal">
-                <img src="images/logo.png" alt="La Huerta San Sebastián">
-            </a>
-            <div class="nav-menu">
-                <a href="#collection" class="nav-link-minimal">Collection</a>
-                <a href="#contact" class="nav-link-minimal">Inquire</a>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <img src="images/ricardo-amigo-logo.png" alt="Ricardo Amigo Real Estate" class="logo">
+            <div class="nav-contact">
+                <a href="tel:+526122342763" class="phone-link">+52 612 234-2763</a>
+                <a href="#contact" class="cta-btn">Schedule Tour</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero — Full Screen Immersive -->
-    <section class="hero-immersive" id="home">
-        <div class="hero-content-minimal">
-            <h1 class="hero-title-minimal">La Huerta San Sebastián</h1>
-            <p class="hero-subtitle-minimal">An Architectural Enclave in the Heart of Todos Santos</p>
+    <!-- Hero Carousel -->
+    <section class="hero">
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="images/hero.jpg" alt="La Huerta San Sebastián">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/casa-nube-1.jpeg" alt="Casa Nube">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/casa-patios-main.jpg" alt="Casa Entre Patios">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/casa-portales-main.jpg" alt="Casa Portales">
+            </div>
+            <div class="carousel-overlay"></div>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
+
+        <button class="carousel-arrow prev" aria-label="Previous">‹</button>
+        <button class="carousel-arrow next" aria-label="Next">›</button>
+
+        <div class="carousel-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+            <button class="dot" data-slide="3"></button>
+        </div>
+
+        <div class="hero-content">
+            <img src="images/logo.png" alt="La Huerta San Sebastián" class="hero-logo">
+            <p class="hero-subtitle">An Architectural Enclave in the Heart of Todos Santos</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">10</span>
+                    <span class="stat-label">Residences</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Available</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">5</span>
+                    <span class="stat-label">Architects</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#collection" class="btn-hero">Explore Collection</a>
+            </div>
         </div>
     </section>
 
-    <!-- Introduction — Poetic -->
-    <section class="intro-minimal">
-        <div class="container-minimal">
-            <div class="intro-grid">
-                <div class="intro-text-block">
-                    <h2 class="section-heading">A curated collection of 10 unique homes</h2>
-                    <p class="intro-paragraph">
-                        Each individually designed by one of five renowned Mexican architects.
-                    </p>
-                </div>
-                <div class="intro-text-block">
-                    <p class="intro-paragraph">
-                        Created for those who value harmony between nature, architecture, and coastal living, 
-                        these residences blend contemporary design with the natural warmth of the Baja landscape.
-                    </p>
-                    <p class="intro-paragraph">
-                        Inspired by Mexican aesthetics, each home offers a seamless indoor-outdoor experience, 
-                        reflecting the artistic spirit and laid-back rhythm of Todos Santos.
-                    </p>
+    <!-- Story Section -->
+    <section class="story">
+        <div class="container">
+            <div class="story-content">
+                <h2 class="section-title">A Living Canvas of Mexican Architecture</h2>
+                <p class="story-intro">
+                    Imagine walking through an orchard of mature trees, discovering your own microclimate among the ancient cardons and native flora. This is La Huerta San Sebastián.
+                </p>
+                <div class="story-grid">
+                    <div class="story-block">
+                        <p>
+                            A curated collection of 10 unique homes, each individually designed by one of five renowned Mexican architects. Created for those who value harmony between nature, architecture, and coastal living, these residences blend contemporary design with the natural warmth of the Baja landscape.
+                        </p>
+                    </div>
+                    <div class="story-block">
+                        <p>
+                            Inspired by Mexican aesthetics, each home offers a seamless indoor-outdoor experience, reflecting the artistic spirit and laid-back rhythm of Todos Santos. On 2,000 m² lots that honor the original orchard landscape, these architectural statements are more than homes—they are a way of life.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Location Statement -->
-    <section class="location-statement">
-        <div class="container-minimal">
-            <p class="location-text">Todos Santos, Baja California Sur, México</p>
-            <p class="location-coords">23°27'16.5"N 110°14'33.7"W</p>
+    <!-- Casa Nube Video Feature -->
+    <section class="video-feature">
+        <div class="container">
+            <div class="video-header">
+                <span class="video-label">Featured Residence</span>
+                <h2 class="section-title">Casa Nube by Hector Barroso</h2>
+                <p class="video-description">
+                    Experience the refined elegance of Casa Nube through this immersive video tour. A testament to architectural excellence where light, material, and place converge.
+                </p>
+            </div>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/_CoJ_0jn8PU" 
+                    title="Casa Nube Video Tour"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </section>
 
     <!-- The Collection -->
     <section class="collection" id="collection">
-        <div class="container-fluid">
+        <div class="container">
             <div class="collection-header">
-                <h2 class="section-heading">The Collection</h2>
-                <p class="collection-subtitle">Three residences available</p>
+                <span class="section-label">The Collection</span>
+                <h2 class="section-title">Three Residences Available</h2>
+                <p class="section-subtitle">Each with its own architectural identity, priced at $2,699,999 USD</p>
             </div>
 
-            <!-- Casa Nube -->
-            <article class="residence-showcase">
-                <div class="residence-media">
-                    <div class="residence-video">
-                        <div class="video-container">
-                            <div class="video-placeholder-luxury">
-                                <span class="video-text">Video Presentation</span>
-                            </div>
+            <div class="collection-grid">
+                <!-- Casa Nube -->
+                <article class="residence-card">
+                    <div class="residence-image">
+                        <img src="images/casa-nube-1.jpeg" alt="Casa Nube">
+                        <div class="residence-overlay">
+                            <a href="#contact" class="btn-overlay">Inquire</a>
                         </div>
                     </div>
-                    <div class="residence-gallery">
-                        <img src="images/casa-nube-1.jpg" alt="Casa Nube">
-                        <img src="images/casa-nube-2.jpg" alt="Casa Nube">
-                        <img src="images/casa-nube-3.jpg" alt="Casa Nube">
-                    </div>
-                </div>
-                
-                <div class="residence-details">
-                    <div class="residence-header-info">
+                    <div class="residence-info">
                         <h3 class="residence-name">Casa Nube</h3>
                         <p class="residence-architect">Hector Barroso</p>
-                    </div>
-                    
-                    <div class="residence-description">
-                        <p>
-                            A refined retreat in harmony with the land. Casa Nube invites stillness, presence, 
-                            and a deep connection to nature. Barroso's design philosophy blends architecture with 
-                            emotion, memory, and habitat—where each space is shaped by light, material, and place.
+                        <p class="residence-description">
+                            A refined retreat in harmony with the land. Barroso's design philosophy blends architecture with emotion, memory, and habitat.
                         </p>
-                    </div>
-
-                    <div class="residence-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">4</span>
-                            <span class="spec-label">Bedrooms</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">4.5</span>
-                            <span class="spec-label">Bathrooms</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">6,187</span>
-                            <span class="spec-label">SQ FT</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">0.494</span>
-                            <span class="spec-label">Acres</span>
+                        <div class="residence-specs">
+                            <span>4 BD</span>
+                            <span>4.5 BA</span>
+                            <span>6,187 sqft</span>
+                            <span>0.494 Acres</span>
                         </div>
                     </div>
+                </article>
 
-                    <div class="residence-footer">
-                        <p class="residence-price">$2,699,999</p>
-                        <a href="#contact" class="btn-luxury">Inquire</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Casa Entre Patios -->
-            <article class="residence-showcase reverse">
-                <div class="residence-media">
-                    <div class="residence-image-hero">
+                <!-- Casa Entre Patios -->
+                <article class="residence-card">
+                    <div class="residence-image">
                         <img src="images/casa-patios-main.jpg" alt="Casa Entre Patios">
+                        <div class="residence-overlay">
+                            <a href="#contact" class="btn-overlay">Inquire</a>
+                        </div>
                     </div>
-                    <div class="residence-gallery">
-                        <img src="images/casa-patios-1.jpg" alt="Casa Entre Patios">
-                        <img src="images/casa-patios-2.jpg" alt="Casa Entre Patios">
-                        <img src="images/casa-patios-3.jpg" alt="Casa Entre Patios">
-                    </div>
-                </div>
-                
-                <div class="residence-details">
-                    <div class="residence-header-info">
+                    <div class="residence-info">
                         <h3 class="residence-name">Casa Entre Patios</h3>
                         <p class="residence-architect">Sergio Ortiz</p>
-                    </div>
-                    
-                    <div class="residence-description">
-                        <p>
-                            Where architectural brilliance meets Baja California Sur's natural splendor. 
-                            Designed by celebrated architect Sergio Ortiz, this home transforms living into an art form, 
-                            where polished concrete dances with warm wood and native stone.
+                        <p class="residence-description">
+                            Where architectural brilliance meets natural splendor. Polished concrete dances with warm wood and native stone.
                         </p>
-                    </div>
-
-                    <div class="residence-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">4</span>
-                            <span class="spec-label">Bedrooms</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">4.5</span>
-                            <span class="spec-label">Bathrooms</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">6,165</span>
-                            <span class="spec-label">SQ FT</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">0.494</span>
-                            <span class="spec-label">Acres</span>
+                        <div class="residence-specs">
+                            <span>4 BD</span>
+                            <span>4.5 BA</span>
+                            <span>6,165 sqft</span>
+                            <span>0.494 Acres</span>
                         </div>
                     </div>
+                </article>
 
-                    <div class="residence-footer">
-                        <p class="residence-price">$2,699,999</p>
-                        <a href="#contact" class="btn-luxury">Inquire</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Casa Portales -->
-            <article class="residence-showcase">
-                <div class="residence-media">
-                    <div class="residence-image-hero">
+                <!-- Casa Portales -->
+                <article class="residence-card">
+                    <div class="residence-image">
                         <img src="images/casa-portales-main.jpg" alt="Casa Portales">
+                        <div class="residence-overlay">
+                            <a href="#contact" class="btn-overlay">Inquire</a>
+                        </div>
                     </div>
-                    <div class="residence-gallery">
-                        <img src="images/casa-portales-1.jpg" alt="Casa Portales">
-                        <img src="images/casa-portales-2.jpg" alt="Casa Portales">
-                        <img src="images/casa-portales-3.jpg" alt="Casa Portales">
-                    </div>
-                </div>
-                
-                <div class="residence-details">
-                    <div class="residence-header-info">
+                    <div class="residence-info">
                         <h3 class="residence-name">Casa Portales</h3>
                         <p class="residence-architect">Ana Victoria Pérez-Gil & Saúl Figueroa</p>
-                    </div>
-                    
-                    <div class="residence-description">
-                        <p>
-                            An exploration of spatial rhythm and connection. Clean architectural lines are softened 
-                            by natural materials and the presence of a mature mango tree that anchors the residence's design. 
-                            Artisanal tile floors create interiors that feel both refined and grounded.
+                        <p class="residence-description">
+                            An exploration of spatial rhythm. A mature mango tree anchors the design, creating refined, grounded interiors.
                         </p>
-                    </div>
-
-                    <div class="residence-specs">
-                        <div class="spec-item">
-                            <span class="spec-value">4</span>
-                            <span class="spec-label">Bedrooms</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">4.5</span>
-                            <span class="spec-label">Bathrooms</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">5,553</span>
-                            <span class="spec-label">SQ FT</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-value">0.494</span>
-                            <span class="spec-label">Acres</span>
+                        <div class="residence-specs">
+                            <span>4 BD</span>
+                            <span>4.5 BA</span>
+                            <span>5,553 sqft</span>
+                            <span>0.494 Acres</span>
                         </div>
                     </div>
-
-                    <div class="residence-footer">
-                        <p class="residence-price">$2,699,999</p>
-                        <a href="#contact" class="btn-luxury">Inquire</a>
-                    </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- Represented By -->
-    <section class="represented">
-        <div class="container-minimal">
-            <div class="represented-content-luxury">
-                <span class="represented-label">Exclusively represented by</span>
-                <img src="images/ricardo-amigo-logo.png" alt="Ricardo Amigo Real Estate" class="represented-logo-luxury">
+    <!-- Development Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <span class="section-label">What Makes La Huerta Exceptional</span>
+                <h2 class="section-title">Curated Excellence</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L25 15H35L27.5 22.5L30 32.5L20 25L10 32.5L12.5 22.5L5 15H15L20 5Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>World-Class Architects</h3>
+                    <p>Five renowned Mexican architects, each bringing their unique vision to create architectural masterpieces.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="15" width="30" height="20" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 15V10C10 7.23858 12.2386 5 15 5H25C27.7614 5 30 7.23858 30 10V15" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="25" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Absolute Privacy</h3>
+                    <p>Only 10 residences in the entire development, ensuring exclusivity and tranquility.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 10V20L25 25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Timeless Design</h3>
+                    <p>Contemporary Mexican architecture that honors tradition while embracing modern living.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5C15 5 10 8 10 15C10 22 20 32 20 32C20 32 30 22 30 15C30 8 25 5 20 5Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="15" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Prime Location</h3>
+                    <p>In the heart of Todos Santos, surrounded by art galleries, world-class dining, and pristine beaches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why La Huerta -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why La Huerta San Sebastián</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Investment Excellence</h3>
+                    <p>
+                        Todos Santos is one of Mexico's fastest-growing luxury markets. With limited inventory of architect-designed homes and increasing international demand, La Huerta represents a rare opportunity to own truly exceptional real estate in an emerging destination.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <h3>Lifestyle Destination</h3>
+                    <p>
+                        From world-renowned surf breaks to award-winning restaurants and vibrant art galleries, Todos Santos offers a sophisticated yet laid-back coastal lifestyle. The Magic Town designation ensures cultural preservation and sustainable growth.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <h3>Architectural Legacy</h3>
+                    <p>
+                        These homes are not just residences—they are architectural statements. Each designed by celebrated Mexican architects, these properties will appreciate not only as real estate but as collectible works of art.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Section -->
+    <section class="agent" id="agent">
+        <div class="container">
+            <div class="agent-grid">
+                <div class="agent-image">
+                    <img src="images/tyson-photo.jpg" alt="Tyson Gargas">
+                </div>
+                <div class="agent-content">
+                    <span class="section-label">Your Guide</span>
+                    <h2 class="section-title">Tyson Gargas</h2>
+                    <p class="agent-title">Exclusive Representative | Ricardo Amigo Real Estate</p>
+                    
+                    <p class="agent-bio">
+                        With over a decade of experience in Baja California Sur's luxury real estate market, Tyson specializes in representing exceptional properties and discerning international clients throughout the region.
+                    </p>
+                    
+                    <p class="agent-bio">
+                        As the exclusive representative of La Huerta San Sebastián, Tyson brings deep knowledge of architectural real estate, the Todos Santos market, and the intricacies of Mexico's property acquisition process for international buyers.
+                    </p>
+
+                    <div class="agent-contact">
+                        <a href="tel:+526122342763" class="contact-btn primary">
+                            <span>Call</span>
+                            <span>+52 612 234-2763</span>
+                        </a>
+                        <a href="mailto:tyson@ricardoamigo.com" class="contact-btn secondary">Email Tyson</a>
+                        <a href="https://wa.me/526122342763" class="contact-btn secondary">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <span class="section-label">The Location</span>
+                    <h2 class="section-title">Todos Santos, Baja California Sur</h2>
+                    <p class="location-description">
+                        A UNESCO-recognized Magic Town where art, culture, and nature converge. Just one hour from Los Cabos International Airport, yet a world apart.
+                    </p>
+                    
+                    <ul class="location-list">
+                        <li>
+                            <span class="distance">5 min</span>
+                            <span>Downtown Todos Santos</span>
+                        </li>
+                        <li>
+                            <span class="distance">10 min</span>
+                            <span>Pacific beaches</span>
+                        </li>
+                        <li>
+                            <span class="distance">1 hour</span>
+                            <span>Los Cabos Airport</span>
+                        </li>
+                        <li>
+                            <span class="distance">15 min</span>
+                            <span>World-class surf breaks</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://maps.app.goo.gl/k1waMJgXBmZE7tu87" target="_blank" class="btn-location">View on Map</a>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.8!2d-110.2435!3d23.4452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI2JzQyLjciTiAxMTDCsDE0JzM2LjYiVw!5e0!3m2!1sen!2smx!4v1234567890"
+                        allowfullscreen 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faqs">
+        <div class="container">
+            <div class="faqs-header">
+                <span class="section-label">Common Questions</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can foreigners buy property in Mexico?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Yes. Foreign buyers can purchase property in Mexico through a fideicomiso (bank trust), which provides secure, legal ownership with full property rights. This is a well-established process that provides the same benefits as direct ownership.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the purchase process timeline?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Typically 60-90 days from offer acceptance to closing. This includes due diligence, title verification, setting up the fideicomiso trust, and completing all legal requirements. We work with experienced attorneys to ensure a smooth process.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are these homes move-in ready?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Casa Nube is completed and ready for occupancy. Casa Entre Patios and Casa Portales are scheduled for completion in 2026. All homes are being sold fully furnished with designer finishes and furnishings included.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the ongoing ownership costs?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Primary costs include annual fideicomiso fees ($500-700 USD), property taxes which are very reasonable in Mexico, property insurance, utilities, and maintenance. Many owners offset costs through vacation rentals during periods they're not using the property.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I visit the properties?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Absolutely. Private tours can be arranged with advance notice. Many international buyers coordinate their visits with a few days in Todos Santos to experience the area. Contact Tyson to schedule your visit.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="contact-luxury" id="contact">
-        <div class="container-minimal">
-            <div class="contact-content-luxury">
-                <div class="contact-intro">
-                    <h2 class="section-heading">Inquire</h2>
-                    <p class="contact-text">
-                        For additional information or to schedule a private tour of La Huerta San Sebastián, 
-                        please reach out to our exclusive representative.
-                    </p>
-                </div>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Schedule Your Private Tour</h2>
+                <p class="contact-description">
+                    Experience La Huerta San Sebastián in person. Complete the form below and Tyson will contact you within 24 hours.
+                </p>
+            </div>
 
-                <div class="contact-info-luxury">
-                    <div class="agent-info-luxury">
-                        <p class="agent-name">Tyson Gargas</p>
-                        <p class="agent-title">Exclusive Representative</p>
-                        <div class="agent-contact-luxury">
-                            <a href="mailto:tyson@ricardoamigo.com" class="contact-link">tyson@ricardoamigo.com</a>
-                            <a href="tel:+526122342763" class="contact-link">+52 612 234 2763</a>
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" name="lastName" required>
                         </div>
                     </div>
 
-                    <form class="contact-form-luxury" id="contactForm">
-                        <div class="form-grid-luxury">
-                            <input type="text" name="name" placeholder="Name" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <input type="tel" name="phone" placeholder="Phone" required>
-                            <select name="property" required>
-                                <option value="">Property of interest</option>
-                                <option value="Casa Nube">Casa Nube</option>
-                                <option value="Casa Entre Patios">Casa Entre Patios</option>
-                                <option value="Casa Portales">Casa Portales</option>
-                                <option value="General Inquiry">General Inquiry</option>
-                            </select>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" required>
                         </div>
-                        <textarea name="message" placeholder="Message" rows="4"></textarea>
-                        <button type="submit" class="btn-luxury-submit">Submit Inquiry</button>
-                    </form>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Property of Interest</label>
+                        <select name="property">
+                            <option value="">Select a residence</option>
+                            <option value="Casa Nube">Casa Nube</option>
+                            <option value="Casa Entre Patios">Casa Entre Patios</option>
+                            <option value="Casa Portales">Casa Portales</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="4" placeholder="Tell us about your interest in La Huerta..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+
+                    <div class="success-message" id="successMessage">
+                        Thank you! Tyson will contact you within 24 hours.
+                    </div>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h4>Direct Contact</h4>
+                        <p>
+                            <strong>Tyson Gargas</strong><br>
+                            Ricardo Amigo Real Estate
+                        </p>
+                        <p>
+                            <a href="tel:+526122342763">+52 612 234-2763</a><br>
+                            <a href="mailto:tyson@ricardoamigo.com">tyson@ricardoamigo.com</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>Office Hours</h4>
+                        <p>
+                            Monday - Saturday<br>
+                            9:00 AM - 6:00 PM (PST)
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>Location</h4>
+                        <p>
+                            Todos Santos<br>
+                            Baja California Sur, México
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-luxury">
-        <div class="container-minimal">
-            <div class="footer-content-luxury">
-                <img src="images/logo.png" alt="La Huerta San Sebastián" class="footer-logo-luxury">
-                <div class="footer-links-luxury">
-                    <a href="https://www.lahuertasansebastian.com" target="_blank">Official Website</a>
-                    <a href="https://www.instagram.com/lahuertasansebastian" target="_blank">Instagram</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="La Huerta San Sebastián" class="footer-logo">
+                    <p>An architectural enclave in Todos Santos</p>
                 </div>
-                <p class="footer-copy">© 2025 La Huerta San Sebastián</p>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Tyson Gargas</p>
+                    <p><a href="tel:+526122342763">+52 612 234-2763</a></p>
+                    <p><a href="mailto:tyson@ricardoamigo.com">tyson@ricardoamigo.com</a></p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <p><a href="https://www.lahuertasansebastian.com" target="_blank">Official Website</a></p>
+                    <p><a href="https://www.instagram.com/lahuertasansebastian" target="_blank">Instagram</a></p>
+                    <p><a href="https://ricardoamigo.com" target="_blank">Ricardo Amigo Real Estate</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Huerta San Sebastián. Exclusively represented by Ricardo Amigo Real Estate.</p>
             </div>
         </div>
     </footer>
