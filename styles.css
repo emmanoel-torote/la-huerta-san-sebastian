@@ -347,12 +347,30 @@ h1, h2, h3, h4 {
 .story {
     padding: var(--space-xl) 0;
     background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.story::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background-image: url('images/Recurso_449_300x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    z-index: 0;
 }
 
 .story-content {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .story-intro {
@@ -454,27 +472,75 @@ h1, h2, h3, h4 {
     background: var(--cream);
     overflow: hidden;
     transition: transform 0.3s ease;
+    border-radius: 8px;
 }
 
 .residence-card:hover {
     transform: translateY(-10px);
 }
 
-.residence-image {
+/* Gallery Carousel */
+.residence-gallery-wrapper {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/2;
 }
 
-.residence-image img {
+.residence-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.residence-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.residence-slide.active {
+    opacity: 1;
+}
+
+.residence-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.residence-card:hover .residence-image img {
-    transform: scale(1.05);
+.residence-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: var(--charcoal);
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    opacity: 0;
+}
+
+.residence-card:hover .residence-arrow {
+    opacity: 1;
+}
+
+.residence-arrow:hover {
+    background: var(--white);
+}
+
+.residence-arrow.prev {
+    left: 10px;
+}
+
+.residence-arrow.next {
+    right: 10px;
 }
 
 .residence-overlay {
@@ -557,11 +623,29 @@ h1, h2, h3, h4 {
 .features {
     padding: var(--space-xl) 0;
     background: var(--cream);
+    position: relative;
+    overflow: hidden;
+}
+
+.features::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 250px;
+    height: 400px;
+    background-image: url('images/Recurso_452_300x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.06;
+    z-index: 0;
 }
 
 .features-header {
     text-align: center;
     margin-bottom: var(--space-lg);
+    position: relative;
+    z-index: 1;
 }
 
 .features-grid {
@@ -1155,758 +1239,4 @@ h1, h2, h3, h4 {
         width: 100%;
         text-align: center;
     }
-}
-
-:root {
-    /* Colors - Ultra Refined Palette */
-    --cream: #FAF8F5;
-    --sand: #E8E3DC;
-    --stone: #D4CEC4;
-    --terracotta: #B8937A;
-    --charcoal: #2A2521;
-    --warm-white: #FFFCF7;
-    
-    /* Typography */
-    --font-heading: 'Acme Gothic', sans-serif;
-    --font-body: 'PP Fraktion Mono', monospace;
-    
-    /* Spacing System */
-    --space-xs: 1rem;
-    --space-sm: 2rem;
-    --space-md: 4rem;
-    --space-lg: 6rem;
-    --space-xl: 10rem;
-    
-    /* Transitions */
-    --ease: cubic-bezier(0.4, 0.0, 0.2, 1);
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
-body {
-    font-family: var(--font-body);
-    background: var(--cream);
-    color: var(--charcoal);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.container-minimal {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 var(--space-md);
-}
-
-.container-fluid {
-    width: 100%;
-    padding: 0;
-}
-
-/* ============================================
-   NAVIGATION - Minimal & Refined
-   ============================================ */
-
-.nav-minimal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    background: rgba(250, 248, 245, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(42, 37, 33, 0.08);
-}
-
-.nav-container-minimal {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: var(--space-sm) var(--space-md);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-minimal img {
-    height: 45px;
-    width: auto;
-    display: block;
-}
-
-.nav-menu {
-    display: flex;
-    gap: var(--space-md);
-    align-items: center;
-}
-
-.nav-link-minimal {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    text-decoration: none;
-    transition: opacity 0.3s var(--ease);
-}
-
-.nav-link-minimal:hover {
-    opacity: 0.6;
-}
-
-/* ============================================
-   HERO - Full Screen Immersive
-   ============================================ */
-
-.hero-immersive {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 1;
-}
-
-.hero-immersive::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(42, 37, 33, 0.3) 0%,
-        rgba(42, 37, 33, 0.5) 100%
-    );
-}
-
-.hero-content-minimal {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 900px;
-    padding: 0 var(--space-md);
-}
-
-.hero-title-minimal {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 400;
-    color: var(--warm-white);
-    letter-spacing: 0.02em;
-    margin-bottom: var(--space-sm);
-    line-height: 1.1;
-}
-
-.hero-subtitle-minimal {
-    font-family: var(--font-body);
-    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-    color: rgba(255, 252, 247, 0.9);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: var(--space-md);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.scroll-indicator span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: rgba(255, 255, 255, 0.8);
-    animation: scroll-down 2s ease-in-out infinite;
-}
-
-@keyframes scroll-down {
-    0% { height: 0; top: 0; }
-    50% { height: 100%; top: 0; }
-    100% { height: 0; top: 100%; }
-}
-
-/* ============================================
-   INTRODUCTION - Poetic & Spacious
-   ============================================ */
-
-.intro-minimal {
-    padding: var(--space-xl) 0;
-    background: var(--warm-white);
-    margin-top: var(--space-lg);
-}
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-}
-
-.intro-text-block {
-    max-width: 600px;
-}
-
-.section-heading {
-    font-family: var(--font-heading);
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
-    color: var(--charcoal);
-    margin-bottom: var(--space-sm);
-}
-
-.intro-paragraph {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--charcoal);
-    opacity: 0.85;
-    margin-bottom: var(--space-sm);
-}
-
-/* ============================================
-   LOCATION STATEMENT
-   ============================================ */
-
-.location-statement {
-    padding: var(--space-md) 0;
-    text-align: center;
-    border-top: 1px solid rgba(42, 37, 33, 0.1);
-    border-bottom: 1px solid rgba(42, 37, 33, 0.1);
-    background: var(--cream);
-}
-
-.location-text {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-bottom: 0.5rem;
-}
-
-.location-coords {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    color: var(--charcoal);
-    opacity: 0.5;
-}
-
-/* ============================================
-   COLLECTION - Residences Showcase
-   ============================================ */
-
-.collection {
-    padding: var(--space-xl) 0 var(--space-lg) 0;
-    background: var(--warm-white);
-}
-
-.collection-header {
-    text-align: center;
-    margin-bottom: var(--space-lg);
-    padding: 0 var(--space-md);
-}
-
-.collection-subtitle {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    opacity: 0.6;
-    margin-top: var(--space-xs);
-}
-
-/* Residence Showcase */
-.residence-showcase {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 0;
-    margin-bottom: var(--space-lg);
-    min-height: 90vh;
-}
-
-.residence-showcase.reverse {
-    grid-template-columns: 1fr 1.2fr;
-}
-
-.residence-showcase.reverse .residence-media {
-    order: 2;
-}
-
-.residence-showcase.reverse .residence-details {
-    order: 1;
-}
-
-/* Media Section */
-.residence-media {
-    position: relative;
-    background: var(--sand);
-}
-
-.residence-video,
-.residence-image-hero {
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-}
-
-.video-container {
-    width: 100%;
-    height: 100%;
-}
-
-.video-placeholder-luxury {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--sand) 0%, var(--stone) 100%);
-}
-
-.video-text {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    opacity: 0.4;
-}
-
-.residence-image-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.residence-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-}
-
-.residence-gallery img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: opacity 0.4s var(--ease);
-}
-
-.residence-gallery img:hover {
-    opacity: 0.85;
-}
-
-/* Details Section */
-.residence-details {
-    padding: var(--space-lg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--cream);
-}
-
-.residence-header-info {
-    margin-bottom: var(--space-md);
-}
-
-.residence-name {
-    font-family: var(--font-heading);
-    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    color: var(--charcoal);
-    margin-bottom: 0.5rem;
-}
-
-.residence-architect {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    color: var(--charcoal);
-    opacity: 0.6;
-}
-
-.residence-description {
-    margin-bottom: var(--space-md);
-}
-
-.residence-description p {
-    font-family: var(--font-body);
-    font-size: 0.9375rem;
-    line-height: 1.8;
-    color: var(--charcoal);
-    opacity: 0.85;
-}
-
-/* Specs */
-.residence-specs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-sm);
-    padding: var(--space-md) 0;
-    border-top: 1px solid rgba(42, 37, 33, 0.1);
-    border-bottom: 1px solid rgba(42, 37, 33, 0.1);
-    margin-bottom: var(--space-md);
-}
-
-.spec-item {
-    text-align: center;
-}
-
-.spec-value {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--charcoal);
-    display: block;
-    margin-bottom: 0.25rem;
-}
-
-.spec-label {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    opacity: 0.5;
-}
-
-/* Footer of Residence Card */
-.residence-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.residence-price {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--charcoal);
-    letter-spacing: 0.01em;
-}
-
-.btn-luxury {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--warm-white);
-    background: var(--charcoal);
-    padding: 1rem 2.5rem;
-    text-decoration: none;
-    border: 1px solid var(--charcoal);
-    transition: all 0.3s var(--ease);
-    display: inline-block;
-}
-
-.btn-luxury:hover {
-    background: transparent;
-    color: var(--charcoal);
-}
-
-/* ============================================
-   REPRESENTED BY
-   ============================================ */
-
-.represented {
-    padding: var(--space-lg) 0;
-    background: var(--warm-white);
-    border-top: 1px solid rgba(42, 37, 33, 0.08);
-}
-
-.represented-content-luxury {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-}
-
-.represented-label {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    opacity: 0.5;
-}
-
-.represented-logo-luxury {
-    height: 40px;
-    width: auto;
-}
-
-/* ============================================
-   CONTACT - Luxury Form
-   ============================================ */
-
-.contact-luxury {
-    padding: var(--space-xl) 0;
-    background: var(--cream);
-}
-
-.contact-content-luxury {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: var(--space-lg);
-}
-
-.contact-intro {
-    max-width: 500px;
-}
-
-.contact-text {
-    font-family: var(--font-body);
-    font-size: 0.9375rem;
-    line-height: 1.8;
-    color: var(--charcoal);
-    opacity: 0.85;
-    margin-top: var(--space-sm);
-}
-
-.agent-info-luxury {
-    margin-top: var(--space-md);
-    padding-top: var(--space-md);
-    border-top: 1px solid rgba(42, 37, 33, 0.1);
-}
-
-.agent-name {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: var(--charcoal);
-    margin-bottom: 0.25rem;
-}
-
-.agent-title {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    color: var(--charcoal);
-    opacity: 0.6;
-    margin-bottom: var(--space-sm);
-}
-
-.agent-contact-luxury {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.contact-link {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    color: var(--charcoal);
-    text-decoration: none;
-    transition: opacity 0.3s var(--ease);
-}
-
-.contact-link:hover {
-    opacity: 0.6;
-}
-
-/* Form */
-.contact-form-luxury {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
-
-.form-grid-luxury {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-sm);
-}
-
-.contact-form-luxury input,
-.contact-form-luxury select,
-.contact-form-luxury textarea {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    padding: 1rem 1.5rem;
-    background: var(--warm-white);
-    border: 1px solid rgba(42, 37, 33, 0.15);
-    color: var(--charcoal);
-    transition: border-color 0.3s var(--ease);
-}
-
-.contact-form-luxury input:focus,
-.contact-form-luxury select:focus,
-.contact-form-luxury textarea:focus {
-    outline: none;
-    border-color: var(--charcoal);
-}
-
-.contact-form-luxury textarea {
-    grid-column: 1 / -1;
-    resize: vertical;
-}
-
-.btn-luxury-submit {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--warm-white);
-    background: var(--charcoal);
-    padding: 1.25rem 3rem;
-    border: 1px solid var(--charcoal);
-    cursor: pointer;
-    transition: all 0.3s var(--ease);
-    justify-self: start;
-}
-
-.btn-luxury-submit:hover {
-    background: transparent;
-    color: var(--charcoal);
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-
-.footer-luxury {
-    padding: var(--space-lg) 0;
-    background: var(--charcoal);
-    color: var(--warm-white);
-}
-
-.footer-content-luxury {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-    text-align: center;
-}
-
-.footer-logo-luxury {
-    height: 50px;
-    width: auto;
-    filter: brightness(0) invert(1);
-    margin-bottom: var(--space-xs);
-}
-
-.footer-links-luxury {
-    display: flex;
-    gap: var(--space-md);
-}
-
-.footer-links-luxury a {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--warm-white);
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.3s var(--ease);
-}
-
-.footer-links-luxury a:hover {
-    opacity: 1;
-}
-
-.footer-copy {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    opacity: 0.5;
-    letter-spacing: 0.05em;
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-
-@media (max-width: 1024px) {
-    .intro-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-    }
-    
-    .residence-showcase,
-    .residence-showcase.reverse {
-        grid-template-columns: 1fr;
-    }
-    
-    .residence-showcase.reverse .residence-media,
-    .residence-showcase.reverse .residence-details {
-        order: initial;
-    }
-    
-    .contact-content-luxury {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --space-md: 2rem;
-        --space-lg: 4rem;
-        --space-xl: 6rem;
-    }
-    
-    .nav-menu {
-        gap: var(--space-sm);
-    }
-    
-    .residence-specs {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .residence-gallery {
-        grid-template-columns: 1fr;
-    }
-    
-    .residence-gallery img {
-        height: 250px;
-    }
-    
-    .form-grid-luxury {
-        grid-template-columns: 1fr;
-    }
-    
-    .residence-footer {
-        flex-direction: column;
-        gap: var(--space-sm);
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 480px) {
-    .residence-video,
-    .residence-image-hero {
-        height: 50vh;
-    }
-    
-    .btn-luxury,
-    .btn-luxury-submit {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Fix: Prevent logo and images from fading */
-.logo-minimal img,
-.footer-logo-luxury,
-.represented-logo-luxury {
-    opacity: 1 !important;
-}
-
-/* Ensure gallery images load properly */
-.residence-gallery img {
-    opacity: 1;
 }
