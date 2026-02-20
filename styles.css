@@ -129,16 +129,17 @@ h1, h2, h3, h4 {
     right: 0;
     z-index: 1000;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
-    backdrop-filter: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: none;
     transition: var(--transition);
 }
 
 .header.scrolled {
-    background: rgba(250, 248, 245, 0.92);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border-bottom: var(--border-thin) solid rgba(42, 37, 33, 0.06);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.05) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: var(--border-thin) solid rgba(255, 255, 255, 0.1);
 }
 
 .nav {
@@ -155,12 +156,7 @@ h1, h2, h3, h4 {
     width: auto;
     filter: brightness(0) invert(1);
     opacity: 0.95;
-    transition: filter 0.3s ease, opacity 0.3s ease;
-}
-
-.header.scrolled .logo {
-    filter: none;
-    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .nav-contact {
@@ -179,8 +175,6 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
-.header.scrolled .phone-link {
-    color: var(--charcoal);
 }
 
 .phone-link:hover {
@@ -202,23 +196,6 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
-.header.scrolled .cta-btn {
-    color: var(--charcoal);
-    border-color: var(--charcoal);
-}
-
-.cta-btn:hover {
-    background: var(--white);
-    color: var(--charcoal);
-}
-
-.header.scrolled .cta-btn:hover {
-    background: var(--charcoal);
-    color: var(--white);
-}
-
-/* ============================================
-   HERO
    ============================================ */
 
 .hero {
