@@ -120,7 +120,8 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   HEADER - Ultra Refined
+/* ============================================
+   HEADER - Transparent on Hero
    ============================================ */
 
 .header {
@@ -129,15 +130,14 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(250, 248, 245, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: transparent;
+    backdrop-filter: none;
     border-bottom: none;
     transition: var(--transition);
 }
 
 .header.scrolled {
-    background: rgba(250, 248, 245, 0.85);
+    background: rgba(250, 248, 245, 0.92);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border-bottom: var(--border-thin) solid rgba(42, 37, 33, 0.06);
@@ -155,11 +155,13 @@ h1, h2, h3, h4 {
 .logo {
     height: 40px;
     width: auto;
+    filter: brightness(0) invert(1);
     opacity: 0.95;
-    transition: opacity 0.3s ease;
+    transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-.logo:hover {
+.header.scrolled .logo {
+    filter: none;
     opacity: 1;
 }
 
@@ -172,15 +174,19 @@ h1, h2, h3, h4 {
 .phone-link {
     font-family: var(--font-body);
     font-size: 0.8125rem;
-    color: var(--charcoal);
+    color: var(--white);
     text-decoration: none;
     letter-spacing: 0.02em;
     transition: color 0.3s ease;
     font-weight: 400;
 }
 
+.header.scrolled .phone-link {
+    color: var(--charcoal);
+}
+
 .phone-link:hover {
-    color: var(--terracotta);
+    color: var(--terracotta-light);
 }
 
 .cta-btn {
@@ -189,10 +195,29 @@ h1, h2, h3, h4 {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     background: transparent;
-    color: var(--charcoal);
+    color: var(--white);
     padding: 0.85rem 2rem;
     text-decoration: none;
-    border: var(--border-thin) solid var(--charcoal);
+    border: var(--border-thin) solid var(--white);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-weight: 400;
+}
+
+.header.scrolled .cta-btn {
+    color: var(--charcoal);
+    border-color: var(--charcoal);
+}
+
+.cta-btn:hover {
+    background: var(--white);
+    color: var(--charcoal);
+}
+
+.header.scrolled .cta-btn:hover {
+    background: var(--charcoal);
+    color: var(--white);
+}
     border-radius: var(--border-radius);
     transition: var(--transition);
     font-weight: 400;
@@ -317,6 +342,8 @@ h1, h2, h3, h4 {
 
 /* Hero Content */
 .hero-content {
+/* Hero Content - Reordered */
+.hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -328,22 +355,31 @@ h1, h2, h3, h4 {
     max-width: 900px;
 }
 
-.hero-logo {
-    height: 100px;
-    width: auto;
-    margin-bottom: 2rem;
-    filter: brightness(0) invert(1);
-    opacity: 0.98;
-}
-
 .hero-subtitle {
     font-family: var(--font-body);
     font-size: 0.6875rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    margin-bottom: 3rem;
-    opacity: 0.95;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
     font-weight: 400;
+}
+
+.hero-logo {
+    height: 120px;
+    width: auto;
+    margin-bottom: 3rem;
+    filter: brightness(0) invert(1);
+    opacity: 0.98;
+}
+
+.hero-description {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    opacity: 0.85;
 }
 
 .hero-stats {
@@ -359,7 +395,7 @@ h1, h2, h3, h4 {
 
 .stat-value {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 400;
