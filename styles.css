@@ -175,8 +175,6 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
-}
-
 .phone-link:hover {
     color: var(--terracotta-light);
 }
@@ -196,6 +194,13 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
+.cta-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--white);
+}
+
+/* ============================================
+   HERO
    ============================================ */
 
 .hero {
