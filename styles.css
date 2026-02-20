@@ -250,9 +250,9 @@ h1, h2, h3, h4 {
     background: linear-gradient(
         to bottom,
         rgba(42, 37, 33, 0) 0%,
-        rgba(42, 37, 33, 0) 70%,
-        rgba(42, 37, 33, 0.25) 85%,
-        rgba(250, 248, 245, 0.85) 100%
+        rgba(42, 37, 33, 0) 50%,
+        rgba(42, 37, 33, 0.75) 85%,
+        rgba(42, 37, 33, 1) 100%
     );
     z-index: 1;
 }
@@ -994,6 +994,450 @@ h1, h2, h3, h4 {
     border-radius: 4px;
     overflow: hidden;
     border: var(--border-thin) solid rgba(42, 37, 33, 0.06);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.75rem 2.5rem;
+    background: var(--white);
+    border: none;
+    text-align: left;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--terracotta);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--terracotta-light);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 300;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-content {
+    padding: 0 2.5rem 1.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.9;
+    color: var(--charcoal);
+    opacity: 0.8;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 600px;
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+
+.contact {
+    padding: var(--space-xl) 0;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: 'LA HUERTA\ASAN SEBASTIÁN';
+    white-space: pre;
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-heading);
+    font-size: 14vw;
+    font-weight: 300;
+    color: rgba(184, 147, 122, 0.03);
+    line-height: 0.9;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.contact-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto var(--space-xl);
+}
+
+.contact-description {
+    font-size: 1.0625rem;
+    color: var(--charcoal-light);
+    margin-top: var(--space-sm);
+    line-height: 1.8;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-xl);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    margin-bottom: 0.65rem;
+    color: var(--charcoal);
+    letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    background: var(--sand-light);
+    border: var(--border-thin) solid rgba(42, 37, 33, 0.12);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--terracotta);
+    background: var(--white);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 1.15rem 3rem;
+    border: var(--border-thin) solid var(--terracotta);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background: var(--terracotta-dark);
+    border-color: var(--terracotta-dark);
+}
+
+.success-message {
+    display: none;
+    background: #4ade80;
+    color: white;
+    padding: 1.15rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.9375rem;
+}
+
+.success-message.show {
+    display: block;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.contact-card {
+    background: var(--sand-light);
+    padding: var(--space-md);
+    border-radius: 4px;
+    border: var(--border-thin) solid rgba(42, 37, 33, 0.06);
+}
+
+.contact-card h4 {
+    font-size: 1.1875rem;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+.contact-card p {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    color: var(--charcoal);
+    opacity: 0.8;
+    margin-bottom: 0.65rem;
+}
+
+.contact-card a {
+    color: var(--terracotta);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.contact-card a:hover {
+    opacity: 0.7;
+}
+
+/* ============================================
+   FOOTER - Strawberry Fields Style
+   ============================================ */
+
+.footer {
+    background: #1a140c;
+    padding: 48px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-top: var(--border-thin) solid rgba(184, 147, 122, 0.1);
+}
+
+.footer-logo-img {
+    height: 30px;
+    filter: brightness(0) invert(1);
+    opacity: 0.6;
+}
+
+.footer-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--terracotta-light);
+}
+
+.footer-note {
+    font-size: 0.68rem;
+    color: rgba(107, 116, 85, 0.6);
+    line-height: 1.5;
+    max-width: 360px;
+}
+/* ============================================
+   RESPONSIVE - REFINED
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .story-grid,
+    .why-grid,
+    .agent-grid,
+    .location-content,
+    .contact-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agent-grid {
+        gap: var(--space-lg);
+    }
+
+    .agent-image {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --space-md: 3rem;
+        --space-lg: 4.5rem;
+        --space-xl: 6rem;
+    }
+
+    .nav {
+        padding: 1.25rem var(--space-sm);
+    }
+
+    .logo {
+        height: 36px;
+    }
+
+    .phone-link {
+        display: none;
+    }
+
+    .hero {
+        margin-top: 75px;
+        height: 82vh;
+        min-height: 620px;
+    }
+
+    .hero-content {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero-logo {
+        height: 70px;
+        margin-bottom: 2rem;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 2.5rem;
+        font-size: 0.6875rem;
+    }
+
+    .hero-stats {
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .stat-value {
+        font-size: 2.25rem;
+    }
+
+    .hero-cta {
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .carousel-dots {
+        bottom: 25px;
+    }
+
+    .carousel-arrow {
+        font-size: 1.5rem;
+        padding: 0.65rem 0.95rem;
+    }
+
+    .carousel-arrow.prev {
+        left: 15px;
+    }
+
+    .carousel-arrow.next {
+        right: 15px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .agent-contact {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 78vh;
+        min-height: 580px;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+
+    .hero-logo {
+        height: 60px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.625rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .hero-cta {
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .carousel-dots {
+        bottom: 20px;
+    }
+
+    .btn-hero,
+    .btn-submit,
+    .btn-location {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+        padding: 1.15rem 2rem;
+    }
+
+    .contact-btn span:first-child {
+        font-size: 0.75rem;
+    }
+
+    .contact-btn span:last-child {
+        font-size: 0.6875rem;
+    }
 }
 
 .faq-question {
