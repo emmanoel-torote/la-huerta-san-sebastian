@@ -400,16 +400,12 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   STORY SECTION - Seamless Integration
+   STORY SECTION - Left-aligned Layout
    ============================================ */
 
 .story {
     padding: var(--space-xl) 0 var(--space-lg);
-    background: linear-gradient(
-        to bottom,
-        var(--cream) 0%,
-        var(--white) 30%
-    );
+    background: var(--white);
     position: relative;
     overflow: hidden;
 }
@@ -429,18 +425,23 @@ h1, h2, h3, h4 {
 }
 
 .story-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: none;
     position: relative;
     z-index: 1;
+}
+
+.story-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: end;
+    margin-bottom: var(--space-lg);
 }
 
 .story-intro {
     font-size: 1.375rem;
     font-family: var(--font-heading);
     color: var(--terracotta);
-    margin-bottom: var(--space-md);
     line-height: 1.3;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -451,13 +452,12 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
-    margin-top: var(--space-lg);
     text-align: left;
 }
 
 .story-block p {
     font-size: 1.0625rem;
-    line-height: 1.9;
+    line-height: 1.8;
     color: var(--charcoal);
     opacity: 0.8;
 }
@@ -526,8 +526,19 @@ h1, h2, h3, h4 {
 }
 
 .collection-header {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: end;
     margin-bottom: var(--space-xl);
+}
+
+.collection-header-left {
+    text-align: left;
+}
+
+.collection-header-right {
+    text-align: left;
 }
 
 .collection-grid {
@@ -538,15 +549,16 @@ h1, h2, h3, h4 {
 }
 
 .residence-card {
-    background: var(--sand-light);
+    background: transparent;
     overflow: hidden;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 4px;
-    border: var(--border-thin) solid rgba(42, 37, 33, 0.06);
+    border-radius: 2px;
+    border: var(--border-thin) solid rgba(184, 147, 122, 0.15);
 }
 
 .residence-card:hover {
     transform: translateY(-8px);
+    border-color: var(--terracotta);
 }
 
 /* Gallery Carousel - Refined */
@@ -654,6 +666,7 @@ h1, h2, h3, h4 {
 
 .residence-info {
     padding: var(--space-sm) var(--space-sm);
+    background: rgba(250, 248, 245, 0.6);
 }
 
 .residence-name {
@@ -717,7 +730,7 @@ h1, h2, h3, h4 {
 }
 
 .features-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: var(--space-lg);
     position: relative;
     z-index: 1;
@@ -786,10 +799,10 @@ h1, h2, h3, h4 {
 }
 
 .why-card {
-    background: var(--sand-light);
+    background: rgba(232, 227, 220, 0.3);
     padding: var(--space-md) var(--space-sm);
-    border-radius: 4px;
-    border: var(--border-thin) solid rgba(42, 37, 33, 0.06);
+    border-radius: 2px;
+    border: var(--border-thin) solid rgba(184, 147, 122, 0.2);
 }
 
 .why-card h3 {
@@ -1186,10 +1199,10 @@ h1, h2, h3, h4 {
 }
 
 .contact-card {
-    background: var(--sand-light);
+    background: rgba(232, 227, 220, 0.3);
     padding: var(--space-md);
-    border-radius: 4px;
-    border: var(--border-thin) solid rgba(42, 37, 33, 0.06);
+    border-radius: 2px;
+    border: var(--border-thin) solid rgba(184, 147, 122, 0.2);
 }
 
 .contact-card h4 {
