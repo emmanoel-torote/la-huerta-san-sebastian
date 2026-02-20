@@ -480,88 +480,75 @@
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-header">
-                <span class="section-label">Get In Touch</span>
-                <h2 class="section-title">Schedule Your Private Tour</h2>
-                <p class="contact-description">
-                    Experience La Huerta San Sebastián in person. Complete the form below and Tyson will contact you within 24 hours.
-                </p>
-            </div>
-
             <div class="contact-grid">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name</label>
-                            <input type="text" name="lastName" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="tel" name="phone">
+                <div>
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-title">Start the<br><em>conversation.</em></h2>
+                    <p class="contact-note">
+                        Whether you're interested in a single residence or learning more about La Huerta, Tyson will walk you through every detail — from architecture and design to the purchase process for foreign buyers. No pressure, just honest guidance from a team that knows this land.
+                    </p>
+                    <div class="agent-card">
+                        <p class="agent-title">Licensed Real Estate Advisor · RARE</p>
+                        <p class="agent-name">Tyson Gargas</p>
+                        <div class="agent-contact" style="margin-top:12px;">
+                            <a href="tel:+526122342763" class="agent-link">+52 612 234-2763</a>
+                            <a href="mailto:tyson@ricardoamigo.com" class="agent-link">tyson@ricardoamigo.com</a>
+                            <a href="https://wa.me/526122342763" target="_blank" class="agent-link">WhatsApp Tyson →</a>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label>Property of Interest</label>
-                        <select name="property">
-                            <option value="">Select a residence</option>
-                            <option value="Casa Nube">Casa Nube</option>
-                            <option value="Casa Entre Patios">Casa Entre Patios</option>
-                            <option value="Casa Portales">Casa Portales</option>
-                            <option value="General Inquiry">General Inquiry</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea name="message" rows="4" placeholder="Tell us about your interest in La Huerta..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Send Message</button>
-
-                    <div class="success-message" id="successMessage">
-                        Thank you! Tyson will contact you within 24 hours.
-                    </div>
-                </form>
-
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <h4>Direct Contact</h4>
-                        <p>
-                            <strong>Tyson Gargas</strong><br>
-                            Ricardo Amigo Real Estate
-                        </p>
-                        <p>
-                            <a href="tel:+526122342763">+52 612 234-2763</a><br>
-                            <a href="/cdn-cgi/l/email-protection#c7b3beb4a8a987b5aea4a6b5a3a8a6aaaea0a8e9a4a8aa"><span class="__cf_email__" data-cfemail="5a2e232935341a2833393b283e353b37333d3574393537">[email&#160;protected]</span></a>
-                        </p>
-                    </div>
-
-                    <div class="contact-card">
-                        <h4>Office Hours</h4>
-                        <p>
-                            Monday - Saturday<br>
-                            9:00 AM - 6:00 PM (PST)
-                        </p>
-                    </div>
-
-                    <div class="contact-card">
-                        <h4>Location</h4>
-                        <p>
-                            Todos Santos<br>
-                            Baja California Sur, México
-                        </p>
+                </div>
+                <div class="form-wrap">
+                    <form id="inquiryForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="fname">First Name</label>
+                                <input class="form-input" type="text" id="fname" name="fname" required placeholder="Jane" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lname">Last Name</label>
+                                <input class="form-input" type="text" id="lname" name="lname" required placeholder="Smith" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-input" type="email" id="email" name="email" required placeholder="jane@email.com" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone / WhatsApp</label>
+                            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="propertyInterest">Property of Interest</label>
+                                <select class="form-select" id="propertyInterest" name="propertyInterest">
+                                    <option value="">Any / Not sure</option>
+                                    <option value="Casa Nube">Casa Nube</option>
+                                    <option value="Casa Entre Patios">Casa Entre Patios</option>
+                                    <option value="Casa Portales">Casa Portales</option>
+                                    <option value="General">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="timeline">Your Timeline</label>
+                                <select class="form-select" id="timeline" name="timeline">
+                                    <option value="">Select</option>
+                                    <option>Ready to move forward</option>
+                                    <option>Within 3 months</option>
+                                    <option>3–6 months</option>
+                                    <option>Just exploring</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message (optional)</label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Tell Tyson what you're looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Inquiry</button>
+                        <p class="form-disclaimer">Your information is shared only with Tyson Gargas at RARE. We respect your privacy and will never sell your contact information.</p>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <h3>Thank you.</h3>
+                        <p>Tyson will be in touch within 24 hours. In the meantime, feel free to reach him directly at <a href="tel:+526122342763" style="color:var(--terracotta);">+52 612 234-2763</a> or via WhatsApp.</p>
                     </div>
                 </div>
             </div>
